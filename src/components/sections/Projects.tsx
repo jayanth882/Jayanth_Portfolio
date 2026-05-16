@@ -5,6 +5,41 @@ import { Badge } from "@/components/ui/badge";
 export function Projects() {
   const projects = [
     {
+      title: "Big Data Retail Sales Forecasting",
+      description: "Developed a retail sales forecasting system using PySpark and Hadoop. Processed large-scale retail datasets using Spark SQL for trend analysis. Implemented ARIMA-based forecasting to analyze retail sales patterns.",
+      tech: ["PySpark", "Hadoop", "Spark SQL", "ARIMA"],
+      links: {} as Record<string, string>,
+      gradient: "from-orange-900/80 via-amber-800/60 to-yellow-900/80",
+      pattern: (
+        <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid-bigdata" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect width="4" height="4" fill="currentColor" opacity="0.3" />
+              <rect x="10" y="10" width="4" height="4" fill="currentColor" opacity="0.3" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid-bigdata)" className="text-orange-400" />
+        </svg>
+      ),
+      icon: (
+        <svg viewBox="0 0 40 40" className="w-10 h-10 text-orange-400" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <path d="M4 36 L4 4" />
+          <path d="M4 36 L36 36" />
+          <path d="M8 28 L14 20 L20 24 L26 12 L32 16" />
+          <circle cx="8" cy="28" r="2" fill="currentColor" />
+          <circle cx="14" cy="20" r="2" fill="currentColor" />
+          <circle cx="20" cy="24" r="2" fill="currentColor" />
+          <circle cx="26" cy="12" r="2" fill="currentColor" />
+          <circle cx="32" cy="16" r="2" fill="currentColor" />
+          <path d="M8 32 L8 28" strokeDasharray="2 2" opacity="0.5" />
+          <path d="M14 32 L14 20" strokeDasharray="2 2" opacity="0.5" />
+          <path d="M20 32 L20 24" strokeDasharray="2 2" opacity="0.5" />
+          <path d="M26 32 L26 12" strokeDasharray="2 2" opacity="0.5" />
+          <path d="M32 32 L32 16" strokeDasharray="2 2" opacity="0.5" />
+        </svg>
+      )
+    },
+    {
       title: "IoT Smart Factory Monitoring System",
       description: "Built an IoT-based system to simulate and monitor machine data in near real-time using Azure cloud services. Processed data using Azure Stream Analytics, stored in Cosmos DB, and visualized via Power BI dashboards. Includes anomaly detection using failure indicators.",
       tech: ["Python", "Azure IoT Hub", "Stream Analytics", "Cosmos DB", "Power BI"],

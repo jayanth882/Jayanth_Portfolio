@@ -29,16 +29,16 @@ export function About() {
             </div>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Aspiring Software Development Engineer skilled in Java, Spring Boot, React.js, and cloud technologies. 
-              Experienced in developing scalable full-stack applications, authentication systems, and database-driven platforms. 
-              Seeking opportunities to build efficient and production-ready software solutions.
+              Computer Science student with hands-on experience in Full Stack Development, Big Data, and Cloud technologies.
+              Skilled in building scalable web applications, REST APIs, and data processing systems using React, Spring Boot,
+              PySpark, Docker, SQL, and Azure.
             </p>
             
             <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
               {[
                 { label: "CGPA", value: "8.56" },
-                { label: "Projects", value: "4+" },
-                { label: "Skills", value: "15+" }
+                { label: "Projects", value: "5+" },
+                { label: "Skills", value: "20+" }
               ].map((stat, i) => (
                 <motion.div 
                   key={stat.label}
