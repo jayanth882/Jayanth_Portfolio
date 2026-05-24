@@ -7,7 +7,7 @@ export function Education() {
       degree: "B.Tech CSE",
       institution: "KL University",
       period: "2023 – 2027",
-      score: "CGPA: 8.56"
+      score: "85.3%"
     },
     {
       degree: "Intermediate",

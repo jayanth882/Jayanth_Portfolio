@@ -99,7 +99,7 @@ export function Contact() {
                     <label htmlFor="name" className="text-sm font-medium">Full Name</label>
                     <Input
                       id="name"
-                      placeholder="John Doe"
+                      placeholder="Your full name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
@@ -111,7 +111,7 @@ export function Contact() {
                     <Input
                       id="email"
                       type="email"
-                      placeholder="john@example.com"
+                      placeholder="Your email address"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required

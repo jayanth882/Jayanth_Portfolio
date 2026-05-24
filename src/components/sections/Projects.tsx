@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Code } from "lucide-react";
+import { Github, ExternalLink, Code, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export function Projects() {
   const projects = [
     {
       title: "Big Data Retail Sales Forecasting",
+      date: "Mar 2026 – Apr 2026",
       description: "Developed a retail sales forecasting system using PySpark and Hadoop. Processed large-scale retail datasets using Spark SQL for trend analysis. Implemented ARIMA-based forecasting to analyze retail sales patterns.",
       tech: ["PySpark", "Hadoop", "Spark SQL", "ARIMA"],
       links: {} as Record<string, string>,
@@ -41,6 +42,7 @@ export function Projects() {
     },
     {
       title: "IoT Smart Factory Monitoring System",
+      date: "Feb 2026 – Mar 2026",
       description: "Built an IoT-based system to simulate and monitor machine data in near real-time using Azure cloud services. Processed data using Azure Stream Analytics, stored in Cosmos DB, and visualized via Power BI dashboards. Includes anomaly detection using failure indicators.",
       tech: ["Python", "Azure IoT Hub", "Stream Analytics", "Cosmos DB", "Power BI"],
       links: {} as Record<string, string>,
@@ -74,6 +76,7 @@ export function Projects() {
     },
     {
       title: "Farmer–Dealer Marketplace Platform",
+      date: "Oct 2025 – Dec 2025",
       description: "A role-based online marketplace connecting farmers and dealers with bidding and negotiation functionality. JWT-based authentication, Spring Boot REST APIs, and Dockerized deployment for remote accessibility.",
       tech: ["React.js", "Spring Boot", "MySQL", "Docker", "JWT"],
       links: {
@@ -105,6 +108,7 @@ export function Projects() {
     },
     {
       title: "SS Photography",
+      date: "March 2026",
       description: "A professional photography portfolio website showcasing beautiful imagery and services. Clean UI with smooth galleries and responsive design, deployed on Vercel.",
       tech: ["React.js", "CSS", "Vercel"],
       links: {
@@ -134,6 +138,7 @@ export function Projects() {
     },
     {
       title: "AITECH.STUDIO",
+      date: "July 2025",
       description: "A React-based platform providing AI learning resources and event management modules. Contributed during internship at Trizula Digital Solutions.",
       tech: ["React.js", "Node.js"],
       links: {
@@ -205,7 +210,15 @@ export function Projects() {
 
               {/* Card body */}
               <div className="p-7 flex flex-col flex-1">
-                <h3 className="text-xl font-bold mb-3 text-foreground">{project.title}</h3>
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
+                  {project.date && (
+                    <span className="flex items-center gap-1.5 text-xs text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full shrink-0 ml-2">
+                      <Calendar className="w-3 h-3" />
+                      {project.date}
+                    </span>
+                  )}
+                </div>
                 <p className="text-muted-foreground mb-5 flex-grow leading-relaxed text-sm">
                   {project.description}
                 </p>

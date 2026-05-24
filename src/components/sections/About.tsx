@@ -36,7 +36,7 @@ export function About() {
             
             <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
               {[
-                { label: "CGPA", value: "8.56" },
+                { label: "B.Tech", value: "85.3%" },
                 { label: "Projects", value: "5+" },
                 { label: "Skills", value: "20+" }
               ].map((stat, i) => (

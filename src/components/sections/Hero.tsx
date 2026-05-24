@@ -58,7 +58,7 @@ export function Hero() {
             variants={item}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
           >
-            Building scalable full-stack applications with modern technologies
+            Building scalable full-stack applications and data-driven solutions with modern technologies
           </motion.p>
           
           <motion.div variants={item} className="flex flex-wrap items-center justify-center gap-4">
