@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import oracleCert from "@assets/oracle-cert.png";
 import salesforceCert from "@assets/salesforce-cert.png";
 import mlCert from "@assets/ml-cert.png";
+import awsCert from "@assets/aws-cert.png";
 
 export function Certifications() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -25,6 +26,11 @@ export function Certifications() {
       title: "Machine Learning",
       image: mlCert,
       issuer: "Internshala Trainings"
+    },
+    {
+      title: "AWS Certified Cloud Practitioner",
+      image: awsCert,
+      issuer: "Amazon Web Services"
     }
   ];
 
