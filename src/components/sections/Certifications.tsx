@@ -1,10 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Award, Eye, Download, X } from "lucide-react";
+import { Award, Eye, ExternalLink, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-import oracleCert from "@assets/oracle-cert.png";
-import salesforceCert from "@assets/salesforce-cert.png";
+import azureCert from "@assets/azure-fundamentals-cert.png";
+import githubCert from "@assets/github-foundations-cert.png";
+import scrumCert from "@assets/scrum-cert.png";
+import dockerCert from "@assets/docker-cert.jpg";
 import mlCert from "@assets/ml-cert.png";
 import awsCert from "@assets/aws-cert.png";
 
@@ -13,24 +15,40 @@ export function Certifications() {
 
   const certifications = [
     {
-      title: "Oracle Cloud Infrastructure 2025 Certified Data Science Professional",
-      image: oracleCert,
-      issuer: "Oracle"
+      title: "Microsoft Azure Fundamentals",
+      image: azureCert,
+      issuer: "Microsoft",
+      credential: "https://learn.microsoft.com/en-us/users/dasarijayanth-7538/credentials/4534fab5761213a5?ref=https%3A%2F%2Fwww.linkedin.com%2F"
     },
     {
-      title: "Salesforce AI Associate",
-      image: salesforceCert,
-      issuer: "Salesforce"
-    },
-    {
-      title: "Machine Learning",
-      image: mlCert,
-      issuer: "Internshala Trainings"
+      title: "GitHub Foundations",
+      image: githubCert,
+      issuer: "GitHub",
+      credential: "https://learn.microsoft.com/en-us/users/dasarijayanth-7538/credentials/3835b9011145e2cf?ref=https%3A%2F%2Fwww.linkedin.com%2F"
     },
     {
       title: "AWS Certified Cloud Practitioner",
       image: awsCert,
-      issuer: "Amazon Web Services"
+      issuer: "Amazon Web Services",
+      credential: "https://cp.certmetrics.com/amazon/en/public/verify/credential/c5333fc9cc874057a0d7fa429556f49b"
+    },
+    {
+      title: "Scrum Fundamentals Certified (SFC)",
+      image: scrumCert,
+      issuer: "SCRUMstudy",
+      credential: "https://www.scrumstudy.com/certification/verify?type=SFC&number=1146433"
+    },
+    {
+      title: "Getting Started with Docker",
+      image: dockerCert,
+      issuer: "Simplilearn SkillUp",
+      credential: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxNzQxIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvOTMwOTc4N185NjMxNjg2MTc2MjE1MTQzMzg1Ny5wbmciLCJ1c2VybmFtZSI6IkRBU0FSSSBKQVlBTlRIIn0%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fdashboard%2Fcertificate&%24web_only=true&_branch_match_id=1600359166761675623&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVN3azCPAxNsxNNkmyrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAJwUeHxBAAAA"
+    },
+    {
+      title: "Machine Learning",
+      image: mlCert,
+      issuer: "Internshala Trainings",
+      credential: "https://trainings.internshala.com/verify-certificate/?certificate_number=halnlkjgprs"
     }
   ];
 
@@ -78,14 +96,31 @@ export function Certifications() {
                       <Eye className="w-4 h-4" />
                     </Button>
                   )}
-                  <Button size="icon" variant="secondary" className="rounded-full">
-                    <Download className="w-4 h-4" />
-                  </Button>
+                  {cert.credential && (
+                    <Button size="icon" variant="secondary" className="rounded-full" asChild>
+                      <a href={cert.credential} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </div>
               <div className="p-6 flex-grow flex flex-col justify-between">
                 <h3 className="font-bold text-lg mb-2 text-foreground line-clamp-2">{cert.title}</h3>
-                <p className="text-sm text-primary font-medium">{cert.issuer}</p>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-primary font-medium">{cert.issuer}</p>
+                  {cert.credential && (
+                    <a 
+                      href={cert.credential} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-xs text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                      Verify
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
