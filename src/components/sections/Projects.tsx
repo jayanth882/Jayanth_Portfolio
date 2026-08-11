@@ -5,6 +5,46 @@ import { Badge } from "@/components/ui/badge";
 export function Projects() {
   const projects = [
     {
+      title: "AI-Powered Medical CRM with Agentic AI",
+      date: "May 2026 – Jun 2026",
+      description: "Developed an AI-powered CRM enabling medical representatives to record HCP interactions using natural language text or voice. Built an Agentic AI workflow with LangGraph and LangChain to extract doctors, products, sentiment, and structured entities. Implemented context-aware Smart Editing to update MySQL records through natural language commands using FastAPI. Built a React.js, Vite, and Redux Toolkit frontend with real-time state synchronization and integrated Groq LLaMA 3 70B for LLM inference.",
+      tech: ["React.js", "FastAPI", "LangGraph", "LangChain", "MySQL", "Redux Toolkit", "Groq API"],
+      links: {
+        github: "https://github.com/jayanth882/AI-First-CRM-Setup.git"
+      },
+      gradient: "from-rose-900/80 via-pink-800/60 to-red-900/80",
+      pattern: (
+        <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="neural-crm" width="30" height="30" patternUnits="userSpaceOnUse">
+              <circle cx="5" cy="5" r="1.5" fill="currentColor" opacity="0.4" />
+              <circle cx="25" cy="5" r="1.5" fill="currentColor" opacity="0.4" />
+              <circle cx="15" cy="15" r="1.5" fill="currentColor" opacity="0.4" />
+              <circle cx="5" cy="25" r="1.5" fill="currentColor" opacity="0.4" />
+              <circle cx="25" cy="25" r="1.5" fill="currentColor" opacity="0.4" />
+              <line x1="5" y1="5" x2="15" y2="15" stroke="currentColor" strokeWidth="0.3" />
+              <line x1="25" y1="5" x2="15" y2="15" stroke="currentColor" strokeWidth="0.3" />
+              <line x1="5" y1="25" x2="15" y2="15" stroke="currentColor" strokeWidth="0.3" />
+              <line x1="25" y1="25" x2="15" y2="15" stroke="currentColor" strokeWidth="0.3" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#neural-crm)" className="text-rose-400" />
+        </svg>
+      ),
+      icon: (
+        <svg viewBox="0 0 40 40" className="w-10 h-10 text-rose-400" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <circle cx="20" cy="12" r="6" />
+          <circle cx="20" cy="12" r="2.5" fill="currentColor" />
+          <path d="M8 30 C8 22 14 18 20 18 C26 18 32 22 32 30" />
+          <path d="M20 18 L20 24" strokeDasharray="2 2" />
+          <path d="M14 28 L20 24 L26 28" />
+          <circle cx="14" cy="28" r="1.5" fill="currentColor" />
+          <circle cx="26" cy="28" r="1.5" fill="currentColor" />
+          <circle cx="20" cy="24" r="1.5" fill="currentColor" />
+        </svg>
+      )
+    },
+    {
       title: "Big Data Retail Sales Forecasting",
       date: "Mar 2026 – Apr 2026",
       description: "Developed a retail sales forecasting system using PySpark and Hadoop. Processed large-scale retail datasets using Spark SQL for trend analysis. Implemented ARIMA-based forecasting to analyze retail sales patterns.",

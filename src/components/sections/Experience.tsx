@@ -5,13 +5,13 @@ export function Experience() {
   const experiences = [
     {
       role: "Data Analyst Intern",
-      company: "Trizula Digital Solutions",
+      company: "Trizula Digital Solutions (TDS)",
       period: "Jun 2025 – Jul 2025",
       description: [
-        "Automated invoice data extraction by converting image-based invoices to Excel datasets using OCR",
-        "Performed data preprocessing and cleaning to improve analytical accuracy",
-        "Designed interactive Power BI dashboards to analyze supermarket sales and inventory trends",
-        "Contributed to development of AITECH.STUDIO, a React-based platform providing AI learning resources and event management modules"
+        "Worked on Invoice.AI, a full-stack invoice processing application using React.js and Spring Boot",
+        "Developed and integrated RESTful APIs for invoice management, frontend-backend communication, and data processing",
+        "Implemented OCR-based invoice extraction, converting unstructured invoice data into structured datasets with validation",
+        "Contributed to AITECH.STUDIO using reusable React components, debugging, testing, Git/GitHub, and Agile practices"
       ]
     }
   ];
