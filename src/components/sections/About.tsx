@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import profilePhoto from "@assets/profile.png";
+import profilePhoto from "@assets/profile.jpg";
 
 export function About() {
   return (
@@ -11,13 +11,14 @@ export function About() {
           viewport={{ once: true, margin: "-100px" }}
           className="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto"
         >
-          <div className="w-48 h-48 md:w-64 md:h-64 shrink-0 relative group">
+          <div className="w-52 h-52 md:w-72 md:h-72 shrink-0 relative group">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary to-accent rounded-full blur-xl opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
             <div className="relative w-full h-full rounded-full border-4 border-background overflow-hidden shadow-2xl">
               <img
                 src={profilePhoto}
                 alt="Dasari Jayanth"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: '50% 20%' }}
               />
             </div>
           </div>
